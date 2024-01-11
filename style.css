@@ -32,18 +32,17 @@ main h1 {
 main {
   padding: 10px 50px;
   width: 80%;
-  background: #111;
-  color: #fff;
 }
 .default {
   display: flex;
   justify-content: center;
-  padding-top: 50px;
   color: #fff;
+  padding: 50px;
 }
 .default .poster img {
   height: 500px;
-  border-radius: 0 0.7rem 0.7rem 0;
+  border-radius: 0 0.7rem .7rem 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .details {
   display: flex;
@@ -58,7 +57,8 @@ main {
     rgba(9, 32, 75, 1) 100%
   );
   justify-content: center;
-  border-radius:  0.7rem 0 0 .7rem ;
+  border-radius: 0.7rem 0 0 0.7rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .details h2 {
   font-size: 2rem;
@@ -93,4 +93,8 @@ button {
   align-self: center;
   border: none;
   margin-top: 30px;
+  cursor: pointer;
+}
+button:hover {
+  background: #cecece;
 }
