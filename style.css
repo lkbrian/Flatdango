@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: row;
+  font-family: "League Spartan", sans-serif;
+  height: 100vh;
+}
+aside {
+  border-right: 1px solid #111;
+  padding: 50px 10px;
+  width: 20%;
+}
+aside ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.movielist {
+  list-style: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 12px 0;
+}
+main h1 {
+  font-family: system-ui, -apple-system, "Open Sans", sans-serif;
+  text-align: center;
+}
+main {
+  padding: 10px 50px;
+  width: 80%;
+  background: #111;
+  color: #fff;
+}
+.default {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  color: #fff;
+}
+.default .poster img {
+  height: 500px;
+  border-radius: 0 0.7rem 0.7rem 0;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+  width: 450px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(10, 58, 116, 1) 0%,
+    rgba(9, 32, 75, 1) 100%
+  );
+  justify-content: center;
+  border-radius:  0.7rem 0 0 .7rem ;
+}
+.details h2 {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+.details p {
+  line-height: 25px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.details .desc {
+  text-align: start;
+  line-height: 20px;
+  letter-spacing: 0;
+  font-size: 1.15rem;
+}
+.time {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+button {
+  width: 30%;
+  font-size: 1rem;
+  padding: 4px;
+  line-height: 30px;
+  font-weight: 600;
+  border-radius: 20px;
+  font-family: "League Spartan", sans-serif;
+  align-self: center;
+  border: none;
+  margin-top: 30px;
+}
