@@ -16,9 +16,11 @@ function fetchData() {
   fetch(" http://localhost:3000/films")
     .then((res) => res.json())
     .then((data) => {
-        console.log(data)    
+        console.log(data)   
+        //calling the functions hee o that am able to create & display  output on the markup
+        displaydefault(data) 
         buildMovieNames(data)
-        displaydefault(data)
+        
     });
     
 }
@@ -45,18 +47,29 @@ function buildMovieNames(data) {
         main.append(poster);
         details.appendChild(btn,description,title);
         time.append(showTime, runTime, tickets);
-
+        if(atickets>0){
+        btn. style.background ='#1F91E8'
+        }else if(atickets <=0){
+            btn.style.background = 'none';
+        }
         btn.addEventListener('click',()=>{
-            //console.log('I have been clicked')
-            tickets.innerHTML = `Available tickets<br>(${--atickets})`
-
-            if(atickets <=0){
-            tickets.innerHTML = `Available tickets<br>(${0})`
-            
-            }
-                if(atickets === 0){
-                btn.innerHTML = 'Sold out';
-            }
+            // console.log('I have been clicked')
+        tickets.innerHTML = `Available tickets<br>(${--atickets})`
+        btn.classList.add('clicked');
+        // Remove the class after a short delay to allow the scaling transition
+        setTimeout(function () {
+           btn.classList.remove('clicked');
+        }, 300);
+        //Accounting for tickets that equates  zero and below 
+        if(atickets <=0){
+        tickets.innerHTML = `Available tickets<br>(${0})`
+        }
+        if(atickets === 0){
+            btn.style.background = 'none';
+            btn.innerHTML=`
+        <img src="./assets/soldout.png" alt="">
+        `
+        }
         
         })
     })
@@ -80,13 +93,21 @@ function displaydefault(data){
     btn.addEventListener('click',()=>{
        // console.log('I have been clicked')
         tickets.innerHTML = `Available tickets<br>(${--atickets})`
+        btn.classList.add('clicked');
 
+        // Remove the class after a short delay to allow the scaling transition
+        setTimeout(function () {
+           btn.classList.remove('clicked');
+        }, 300);
         //Accounting for tickets that equates  zero and below 
         if(atickets <=0){
         tickets.innerHTML = `Available tickets<br>(${0})`
         }
-        if(atickets ===0){
-            btn.innerHTML = 'Sold out';
+        if(atickets === 0){
+            btn.style.background = 'none';
+            btn.innerHTML=`
+        <img src="./assets/soldout.png" alt="">
+        `
         }
     })
     

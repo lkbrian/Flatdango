@@ -17,13 +17,23 @@ aside {
   rgb(3, 13, 32) 80%,
   #010f24 100%
 );
-  padding: 50px 0px;
+  padding: 0px 0px;
   width: 20%;
 }
 aside ul {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+.menu{
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 10px ;
+  padding-top: 30px;
+  background: #fff;
+  font-weight: 600;
+  color: #020f20;  
 }
 .movielist {
   list-style: none;
@@ -35,8 +45,12 @@ aside ul {
   background: rgba(24, 33, 46, 0.9);
 }
 main h1 {
-  font-family: system-ui, -apple-system, "Open Sans", sans-serif;
+font-family: 'Silkscreen', sans-serif;
   text-align: center;
+  padding: 8px 0;
+  backdrop-filter: blur(10px);
+  font-size: 4rem;
+  font-weight: 400;
 }
 main {
   padding: 10px 50px;
@@ -47,12 +61,23 @@ main {
   background-size: cover;
   backdrop-filter: blur(2px);
 }
+
+.intro{
+  width: auto;
+  margin: auto;
+  text-align: center;
+  width: 60%;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  backdrop-filter: blur(10px);
+  line-height: 24px;
+  padding-bottom: 15px;
+}
 .default {
   display: flex;
+  align-items: center;
   justify-content: center;
-  color: #fff;
-  padding: 50px;
-  
+  color: #fff;  
 }
 .default .poster img {
   height: 500px;
@@ -110,7 +135,45 @@ button {
   border: none;
   margin-top: 30px;
   cursor: pointer;
+  background: #1F91E8;
+  color: #fff;
+  scale: 1;
 }
-button:hover {
-  background: #cecece;
+button img{
+  height: 80px;
+  cursor: not-allowed;
+
+}
+.clicked{
+  scale: 0.9;
+}
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 95%;
+  gap: 20px;
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+}
+footer div{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+footer .info p{
+font-size: .9rem;
+cursor: pointer;
+}
+footer div img{
+  height: 70px;
+  padding-right: 20px;
+}
+footer div img[alt= "hulu"]{
+  height: 30px;
+}
+footer div img[alt= "hbo"]{
+  height: 90px;
 }
