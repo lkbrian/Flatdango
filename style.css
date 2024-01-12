@@ -10,8 +10,14 @@ body {
   height: 100vh;
 }
 aside {
-  border-right: 1px solid #111;
-  padding: 50px 10px;
+  color: #fff;
+  background: linear-gradient(
+  to bottom right,
+  #020f20 0%,
+  rgb(3, 13, 32) 80%,
+  #010f24 100%
+);
+  padding: 50px 0px;
   width: 20%;
 }
 aside ul {
@@ -23,7 +29,10 @@ aside ul {
   list-style: none;
   letter-spacing: 1px;
   cursor: pointer;
-  padding: 12px 0;
+  padding: 12px;
+}
+.movielist:hover{
+  background: rgba(24, 33, 46, 0.9);
 }
 main h1 {
   font-family: system-ui, -apple-system, "Open Sans", sans-serif;
@@ -32,17 +41,23 @@ main h1 {
 main {
   padding: 10px 50px;
   width: 80%;
+  color: #fff;
+  background: url('./assets/Cover.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  backdrop-filter: blur(2px);
 }
 .default {
   display: flex;
   justify-content: center;
   color: #fff;
   padding: 50px;
+  
 }
 .default .poster img {
   height: 500px;
   border-radius: 0 0.7rem .7rem 0;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: 25px 0px 20px -20px rgba(104,106,110,0.7);
 }
 .details {
   display: flex;
@@ -51,14 +66,15 @@ main {
   padding: 40px;
   width: 450px;
   height: 500px;
-  background: radial-gradient(
-    circle,
-    rgba(10, 58, 116, 1) 0%,
-    rgba(9, 32, 75, 1) 100%
-  );
+background: linear-gradient(
+  to bottom right,
+  #020f20 0%,
+  rgb(3, 13, 32) 80%,
+  #010f24 100%
+);
   justify-content: center;
   border-radius: 0.7rem 0 0 0.7rem;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 }
 .details h2 {
   font-size: 2rem;
