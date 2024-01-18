@@ -13,7 +13,7 @@ const btn = document.querySelector('button')
 
 //Fetching data from our db.json
 function fetchData() {
-  fetch(" http://localhost:3000/films")
+  fetch(" https://json-data-89ks.onrender.com/films")
     .then((res) => res.json())
     .then((data) => {
         console.log(data)   

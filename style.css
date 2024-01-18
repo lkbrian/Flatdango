@@ -177,3 +177,6 @@ footer div img[alt= "hulu"]{
 footer div img[alt= "hbo"]{
   height: 90px;
 }
+footer div img[alt = "netflix"]{
+  height: 50px;
+}
